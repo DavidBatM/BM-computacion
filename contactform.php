@@ -1,4 +1,25 @@
 <?php
+$nombre = $_POST["name"];
+$email = $_POST["email"];
+$asunto = $_POST['subject'];
+$mensaje = $_POST["textarea"];
+
+
+$para = "david_bat@live.com";
+$asunto = "Nuevo mensaje de la web";
+
+$mensaje="
+         De: ".$nombre."
+         Mensaje: ".$mensaje."
+         Email: ".$email."
+         Asunto: ".$asunto"
+         ";
+
+mail($para, $asunto, utf8_decode($mensaje), $header);
+header("location:index.html");
+?>
+
+<!--  ?php
 /* Aca conectamos el form de mi pagina de contacto con el server */
 $nombre = $_POST['name'];
 $mail = $_POST['email'];
@@ -35,3 +56,4 @@ header('location:exito.html');
 */
 
 ?>
+ -->
