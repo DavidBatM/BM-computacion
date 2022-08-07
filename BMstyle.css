@@ -13,6 +13,10 @@
   background-color: rgb(9, 33, 105);
 }
 
+.navbar {
+  background-color: rgb(9, 33, 105);
+}
+
 a.nav-link {
   color: rgba(255, 255, 255, 0.92);
 }
@@ -138,7 +142,7 @@ button.navbar-toggler {
   text-align: center;
 }
 
-/* aca arranca la paginas contacto */
+/* aca arranca la pagina contacto */
 .grid2 {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -207,6 +211,15 @@ button.navbar-toggler {
 .sanmartin {
   border-radius: 3px;
   padding-left: 5px;
+}
+
+/* aca termina la pagina de contacto y comienza la pagina de sobre nosotros */
+.bg {
+  background-color: white;
+}
+
+.row {
+  background-color: rgba(225, 227, 231, 0.63);
 }
 
 @media (min-width: 992px) and (max-width: 1323px) {
