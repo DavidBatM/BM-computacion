@@ -1,12 +1,8 @@
 .grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: auto 500px 50px 500px 60px;
-  grid-template-areas: "head head" "banner banner" "methods methods" "review review2" "footer footer";
-}
-
-.head {
-  grid-area: head;
+  grid-template-rows: 500px 50px 500px 60px;
+  grid-template-areas: "banner banner" "methods methods" "review review2" "footer footer";
 }
 
 .container-fluid {
@@ -38,7 +34,6 @@ ul.navbar-nav {
 
 .collapse {
   justify-content: center;
-  align-items: center;
   text-decoration: none;
 }
 
@@ -146,8 +141,8 @@ button.navbar-toggler {
 .grid2 {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100px 800px 60px;
-  grid-template-areas: "head head" "form location" "footer footer";
+  grid-template-rows: 800px 60px;
+  grid-template-areas: "form location" "footer footer";
 }
 
 .form {
@@ -226,8 +221,8 @@ button.navbar-toggler {
   .grid {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: auto 500px 80px 500px 60px;
-    grid-template-areas: "head head" "banner banner" "methods methods" "review review2" "footer footer";
+    grid-template-rows: 500px 80px 500px 60px;
+    grid-template-areas: "banner banner" "methods methods" "review review2" "footer footer";
   }
 }
 @media (max-width: 991px) {
@@ -252,8 +247,14 @@ button.navbar-toggler {
   .grid {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto 300px 100px 320px 450px 60px;
-    grid-template-areas: "head" "banner" "methods" "review" "review2" "footer";
+    grid-template-rows: 300px 100px 320px 450px 60px;
+    grid-template-areas: "banner" "methods" "review" "review2" "footer";
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 550px 800px 60px;
+    grid-template-areas: "form" "location" "footer";
   }
   .review {
     grid-area: review;
