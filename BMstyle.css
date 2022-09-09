@@ -7,10 +7,12 @@
 
 .container-fluid {
   background-color: rgb(9, 33, 105);
+  display: flex;
 }
 
 .navbar {
   background-color: rgb(9, 33, 105);
+  display: flex;
 }
 
 a.nav-link {
@@ -25,6 +27,12 @@ a.nav-link:hover {
 li.nav-item {
   color: white;
   padding: 0px 20px 0px 20px; /* espacio entre los menus */
+}
+
+.redes {
+  display: flex;
+  position: fixed;
+  margin-left: 60%;
 }
 
 ul.navbar-nav {
@@ -217,6 +225,38 @@ button.navbar-toggler {
   background-color: rgba(225, 227, 231, 0.63);
 }
 
+/* ACA TERMINA LA PAGINA SOBRE NOSOTROS Y COMIENZA LA TIENDA */
+.gridStore {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 200px 200px 200px 200px 200px;
+  grid-template-areas: "filtros producto1" "filtros producto2" "filtros producto3" "filtros producto4" "filtros producto5";
+}
+
+.filtros {
+  grid-area: filtros;
+}
+
+.producto1 {
+  grid-area: producto1;
+}
+
+.producto2 {
+  grid-area: producto2;
+}
+
+.producto3 {
+  grid-area: producto3;
+}
+
+.producto4 {
+  grid-area: producto4;
+}
+
+.producto5 {
+  grid-area: producto5;
+}
+
 @media (min-width: 992px) and (max-width: 1323px) {
   .grid {
     display: grid;
@@ -299,6 +339,11 @@ button.navbar-toggler {
     grid-area: banner;
     background-size: cover;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./imgs/background/background\ two.jpg);
+  }
+  .redes {
+    display: flex;
+    position: initial;
+    margin-left: 18px;
   }
 }
 @media (max-width: 610px) {
