@@ -2,6 +2,9 @@ $colors: (
     blue1: rgb(9,33,105),
     blue2: rgb(25,72,176),
 );
+.azul{
+    background-color: blue;
+}
 .grid{    
     display: grid;
     grid-template-columns: 50% 50%;

@@ -4,8 +4,8 @@
 desc = compra*0.05;
 pago = compra-desc; */
 
-var costoDelCarrito = 0;
-var costoDelCarritoConDescuento = 0;
+let costoDelCarrito = 0;
+let costoDelCarritoConDescuento = 0;
 
 /* ARRAY DE PRODUCTOS */
 const Productos = [
@@ -19,8 +19,9 @@ const Productos = [
 /* element.innerHTML = "<button>Boton y codigo</button>" //lo que escribo ahi en el HTML */
 function sumarAlCarrito(valor){
     costoDelCarrito = costoDelCarrito + valor;    
+    let desc = 0;
     if(costoDelCarrito >= 5000){
-        var desc = costoDelCarrito*0.05;
+        desc = costoDelCarrito*0.05;
         costoDelCarritoConDescuento = costoDelCarrito - desc;
         console.log("El descuento es de:" + desc);
         console.log("El monto final es de:" + costoDelCarritoConDescuento);
@@ -28,16 +29,16 @@ function sumarAlCarrito(valor){
     else{
         costoDelCarritoConDescuento = costoDelCarrito;
     }
-    var element = document.getElementById("pMonto");
+    let element = document.getElementById("pMonto");
     element.innerHTML = "El costo de tu compra es " + costoDelCarritoConDescuento; //escribe en el HTML lo que identificamos aca
     if(desc >0){
-    var element2 = document.getElementById("pDesc");
+    let element2 = document.getElementById("pDesc");
     element2.innerHTML = "El descuento efectuado es de " + desc;
     }    
 }
 
 function mostrarProductos(productos){
-    var gridStore = document.getElementById("gridStore");
+    let gridStore = document.getElementById("gridStore");
     for (let producto of productos){  // OF ES PARA ARRAY (IN ES PARA STRINGS)
         let codigoHTML = `
         <section class="producto${producto.id}"><div><img src="" alt=""></div><div><p>${producto.nombre} $${producto.precio}</p><button onclick="sumarAlCarrito(${producto.precio})">Agregar al carrito</button></div></section>`;
@@ -46,3 +47,11 @@ function mostrarProductos(productos){
 }
 
 mostrarProductos(Productos);
+
+pago.addEventListener("mouseover", () => console.log("mouseover"));
+pago.addEventListener("mouseover", () => {
+    pago.className= "azul";
+});
+pago.addEventListener("mouseout", () => {
+    pago.className= "red";
+});
