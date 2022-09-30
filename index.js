@@ -96,6 +96,26 @@ function vaciarCarrito() {
     localStorageSave();
     mostrarCarrito();
 }
+function pago() {
+    if (costoDelCarrito >0) {
+        Swal.fire(
+            'Pagado!',
+            'Tu compra se ha realizado con exito!',
+            'success'
+        )
+        costoDelCarrito = 0;
+        desc = 0;
+        productosCarrito = [];
+        localStorageSave();
+        mostrarCarrito();
+        return
+    }
+    Swal.fire(
+        'Ups!',
+        'No hay productos en tu carrito aun...',
+        'error'
+    )        
+}
 
 
 //cuando cargo la pagina hacer una funcion que carge el carrito y muestre los productos que ya tenes

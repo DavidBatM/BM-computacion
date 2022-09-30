@@ -15,6 +15,9 @@ $colors: (
     "review review2"
     "footer footer";
 }
+.head{
+    size: 150px;
+}
 .container-fluid {
     background-color: rgb(9,33,105);  
     display: flex;  
@@ -37,7 +40,7 @@ li.nav-item{
 .redes{
     display: flex;
     position: fixed;
-    margin-left: 60%;
+    margin-left: 90%;
 }
 ul.navbar-nav  {    
     font-family: 'Montserrat', sans-serif;
@@ -339,6 +342,16 @@ button.navbar-toggler {
     }
 }
 @media (max-width: 610px) {
+    .grid{    
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 500px 90px 500px 60px ;
+        grid-template-areas:
+        "banner banner"
+        "methods methods"
+        "review review2"
+        "footer footer";
+    }
     .methods {
         display: flex;
         justify-content: center;
