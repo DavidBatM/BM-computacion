@@ -10,11 +10,11 @@ let productosCarrito; //esto es un array vacio
 
 /* ARRAY DE PRODUCTOS */
 const Productos = [
-    {id: 0, nombre: "Placa rtx 3060", precio: 100}, //RESPETAR LOS ESPACIOS!!!!!!!!!
-    {id: 1, nombre: "Placa rtx 3070", precio: 200},
+    {id: 0, nombre: "Placa rtx 3060", precio: 1000}, //RESPETAR LOS ESPACIOS!!!!!!!!!
+    {id: 1, nombre: "Placa rtx 3070", precio: 2000},
     {id: 2, nombre: "Placa rtx 3080", precio: 3000},
-    {id: 3, nombre: "Placa rtx 3090", precio: 400},
-    {id: 4, nombre: "Placa rtx TI 3090", precio: 400},
+    {id: 3, nombre: "Placa rtx 3090", precio: 4000},
+    {id: 4, nombre: "Placa rtx TI 3090", precio: 4500},
 ];
 
 
@@ -60,7 +60,7 @@ function mostrarProductos(productos){
     let gridStore = document.getElementById("gridStore");
     for (let producto of productos){  // OF ES PARA ARRAY (IN ES PARA STRINGS)
         let codigoHTML = `
-        <section class="producto${producto.id}"><div><img src="" alt=""></div><div><p>${producto.nombre} $${producto.precio}</p><button onclick="sumarAlCarrito(${producto.id})">Agregar al carrito</button></div></section>`;
+        <section class="producto${producto.id}"><div class="imgSizeTienda"><img src="./imgs/sobre nosotros/20211101_1902232 - copia.jpg" alt="" class="imgTienda"></div><div class="cat"><p>${producto.nombre} $${producto.precio}</p><button onclick="sumarAlCarrito(${producto.id})">Agregar al carrito</button></div></section>`;
         gridStore.innerHTML = gridStore.innerHTML + codigoHTML;
     }
 }
@@ -115,6 +115,7 @@ function pago() {
         'No hay productos en tu carrito aun...',
         'error'
     )        
+
 }
 
 

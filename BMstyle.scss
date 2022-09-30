@@ -212,7 +212,7 @@ button.navbar-toggler {
 .gridStore {
     display: grid;
     grid-template-columns: 25% 75%;
-    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-rows: 400px 400px 400px 400px 400px;
     grid-template-areas: 
     "filtros producto1"
     "filtros producto2"
@@ -222,21 +222,39 @@ button.navbar-toggler {
 }
 .filtros {
     grid-area: filtros;
+    padding: 10px;
+}
+.but{
+    border-radius: 5px;
+}
+.producto0 {
+    grid-area: producto1;    
 }
 .producto1 {
-    grid-area: producto1;
-}
-.producto2 {
     grid-area: producto2;
 }
-.producto3 {
+.producto2 {
     grid-area: producto3;
 }
-.producto4 {
+.producto3 {
     grid-area: producto4;
 }
-.producto5 {    
+.producto4 {    
     grid-area: producto5;
+}
+.cat{
+    background-color: rgb(9,33,105,0.9) ;
+    color: white;
+    border-width: 2px;
+    border-color: black;
+    text-align: center;   
+}
+.imgTienda{
+    height: 280px;    
+}
+.imgSizeTienda{
+    display: flex;    
+    justify-content: center;
 }
   
 @media (min-width: 992px) and(max-width: 1323px) {
