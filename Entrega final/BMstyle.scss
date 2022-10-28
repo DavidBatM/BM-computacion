@@ -1,0 +1,404 @@
+$colors: (
+    blue1: rgb(9,33,105),
+    blue2: rgb(25,72,176),
+);
+.azul{
+    background-color: blue;
+}
+.grid{    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 500px 50px 500px 60px ;
+    grid-template-areas:
+    "banner banner"
+    "methods methods"
+    "review review2"
+    "footer footer";
+}
+.head{
+    size: 150px;
+}
+.container-fluid {
+    background-color: rgb(9,33,105);  
+    display: flex;  
+}
+.navbar{
+    background-color: rgb(9,33,105);
+    display: flex;
+}
+a.nav-link {
+    color: rgba(255, 255, 255, 0.92);       
+}
+a.nav-link:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.92);
+}
+li.nav-item{
+    color: white;
+    padding: 0px 20px 0px 20px; /* espacio entre los menus */    
+}
+.redes{
+    display: flex;
+    position: fixed;
+    margin-left: 90%;
+}
+ul.navbar-nav  {    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+.collapse {    
+    justify-content: center;
+    text-decoration: none;
+}
+button.navbar-toggler {    
+    background-color: white;
+}
+.navbar .navbar-brand a { /* esto mueve el logo */
+    color: none ;
+}
+.navredes {
+    text-decoration: none;
+    color: white;
+}
+.wsp{
+    padding-left: 10px;
+}
+.banner {
+    grid-area: banner;
+    background-size: cover;
+    background-image: url(./imgs/background/background\ two.jpg);
+}
+.bannertext{
+    display: flex;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(26, 25, 25, 0.774);
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 65%;   
+}
+.bannertext2{
+    display: flex;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(26, 25, 25, 0.774);
+    font-size: 20px;
+    margin-top: -1%;
+    margin-left: 65%;   
+}
+.methods {
+    grid-area: methods;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(225, 227, 231, 0.63) ;
+    background-size: contain;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 18%;
+    margin-right: 18%;
+    border-radius: 8px;
+    &__job{
+        padding-left: 1px;
+        padding-right: 15px;
+    }
+}
+.material-symbols-outlined {
+    padding-left: 15px;
+    padding-right: 1px;
+}
+.review {
+    grid-area: review;
+    background-color:rgb(9,33,105) ;
+    color: white;
+    &__rev {
+        margin: 20% 5%;
+        &__servtitle{
+            font-size: 40px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        &__servdesc{
+            font-size: 25px;
+            margin-right: 15%;
+        }
+    }
+}
+.review2 {
+    grid-area: review2;
+    background-color: rgb(9,33,105);
+    color: white;
+    justify-content: center;
+    font-size: 25px;
+    padding: 100px 0px;
+}
+.footer {
+    grid-area: footer;
+    background-color:white ;
+    color: rgb(9,33,105);
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 5px;
+    text-align: center;
+    
+}
+/* aca arranca la pagina contacto */
+.grid2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 800px  60px ;
+    grid-template-areas:
+    "form location"
+    "footer footer";
+}
+.form {
+    grid-area: form;
+}
+.location {
+    grid-area: location;
+}
+.title2 {
+    margin: 30px 0px 15px 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.desc2 {
+    font-family: 'Montserrat', sans-serif;
+}
+.form-control{
+    margin: 15px 0px 15px 0px;    
+}
+.btn-primary {
+    background-color:rgb(9,33,105,0.9) ;
+    border-radius: 5px;
+    border-width: 2px;
+    color: white;
+    border-color: white;
+    font-size: 18px;
+}
+.titloc {
+    margin: 10% 20% 10% 0%;    
+    &__informacion{
+        padding: 10px 0px 10px 10px;
+        border-radius: 3px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        background-color: rgba(225, 227, 231);
+    }
+}
+.email {
+    display: flex;
+}
+.emaildesc{
+    padding-left: 3px;
+}
+.map {
+    margin: 10% 10% 2% 0%;
+    padding-left: 10px;
+    &__donde{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+    }
+}
+.sanmartin{
+    border-radius: 3px;
+    padding-left: 5px;
+}
+/* aca termina la pagina de contacto y comienza la pagina de sobre nosotros */
+.bg{
+    background-color:white ;
+}
+.row {
+    background-color:rgba(225, 227, 231, 0.63) ;
+
+}
+/* ACA TERMINA LA PAGINA SOBRE NOSOTROS Y COMIENZA LA TIENDA */
+.gridStore {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 250px 250px 250px 250px 250px;
+    grid-template-areas: 
+    "filtros producto0"
+    "filtros producto1"
+    "filtros producto2"
+    "filtros producto3"
+    "filtros producto4";    
+}
+.filtros {
+    grid-area: filtros;
+    padding: 10px;
+}
+.but{
+    border-radius: 5px;
+}
+.producto0 {
+    grid-area: producto0; 
+    display: flex;
+    padding: 20px;          
+}
+.producto1 {
+    grid-area: producto1;
+    display: flex;
+    padding: 20px;
+    
+}
+.producto2 {
+    grid-area: producto2;
+    display: flex;
+    padding: 20px;
+}
+.producto3 {
+    grid-area: producto3;
+    display: flex;
+    padding: 20px;
+}
+.producto4 {    
+    grid-area: producto4;
+    display: flex;
+    padding: 20px;
+}
+.cat{
+    background-color: rgb(9,33,105,0.9) ;
+    color: white;
+    border-width: 2px;
+    border-color: black;
+    text-align: center;  
+    height: 200px; 
+    width: 100%;
+    padding-top: 50px;
+}
+.imgTienda{
+    height: 200px;    
+}
+/* .imgSizeTienda{
+    display: flex;    
+    justify-content: center;
+} */
+  
+@media (min-width: 992px) and(max-width: 1323px) {
+    .grid{    
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 500px 80px 500px 60px ;
+        grid-template-areas:
+        "banner banner"
+        "methods methods"
+        "review review2"
+        "footer footer";
+    }
+}
+@media (max-width: 991px) {
+    .bannertext{
+        display: flex;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        font-size: 40px;
+        margin-top: 10%;
+        margin-left: 10%;   
+    } 
+    .bannertext2{
+        display: flex;
+        position: relative;
+        font-family: 'Montserrat', sans-serif;
+        color: rgb(255,255,255,0.8);
+        font-size: 20px;
+        margin-top: -1%;
+        margin-left: 10%;   
+    }
+    .grid{    
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 300px 100px 320px 450px 60px ;
+        grid-template-areas:
+        "banner"
+        "methods"
+        "review"
+        "review2"
+        "footer";
+    }  
+    .grid2 {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 550px 800px 60px ;
+        grid-template-areas:
+        "form"
+        "location"
+        "footer";
+    }
+    .review {
+        grid-area: review;
+        background-color:rgb(9,33,105) ;
+        color: white;
+        &__rev {
+            margin: 5% 5%;
+            &__servtitle{
+                font-size: 40px;
+                font-family: 'Montserrat', sans-serif;
+            }
+            &__servdesc{
+                font-size: 25px;
+                margin-right: 15%;
+            }
+        }
+    }
+    .review2 {
+        grid-area: review2;
+        background-color: rgb(9,33,105);
+        color: white;
+        justify-content: center;
+        font-size: 25px;
+        padding: 10% 5%;
+        
+    }
+    .methods {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(225, 227, 231, 0.63) ;
+        background-size: contain;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 12%;
+        margin-right: 12%;
+        border-radius: 8px;
+        &__job{
+            padding-left: 1px;
+            padding-right: 15px;
+        }
+    }  
+    .banner {
+        grid-area: banner;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./imgs/background/background\ two.jpg);
+    }
+    .redes{
+        display:flex;    
+        position:initial;  
+        margin-left: 18px;
+    }
+}
+@media (max-width: 610px) {
+    .grid{    
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 500px 90px 500px 60px ;
+        grid-template-areas:
+        "banner banner"
+        "methods methods"
+        "review review2"
+        "footer footer";
+    }
+    .methods {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(225, 227, 231, 0.63) ;
+        background-size: contain;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        margin-left: 1%;
+        margin-right: 1%;
+        border-radius: 8px;
+        &__job{
+            padding-left: 1px;
+            padding-right: 15px;
+        }
+    }  
+
+}
+/* Aca termina el Home */
