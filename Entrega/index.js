@@ -7,6 +7,17 @@ pago = compra-desc; */
 let costoDelCarrito = 0;
 let desc = 0;
 let productosCarrito; //esto es un array vacio
+let Productos = 0;
+
+/* ARRAY DE PRODUCTOS */
+/* const Productos = [
+    { id: 0, nombre: "Placa rtx 3060", precio: 1000 }, //RESPETAR LOS ESPACIOS!!!!!!!!!
+    { id: 1, nombre: "Placa rtx 3070", precio: 2000 },
+    { id: 2, nombre: "Placa rtx 3080", precio: 3000 },
+    { id: 3, nombre: "Placa rtx 3090", precio: 4000 },
+    { id: 4, nombre: "Placa rtx TI 3090", precio: 4500 },
+]; */
+
 
 
 /* element.innerHTML = "<button>Boton y codigo</button>" //lo que escribo ahi en el HTML */
@@ -28,7 +39,7 @@ function localStorageSave() {
 
 function buscarProducto(id) {
     console.log(id);
-    let producto = productos[id];
+    let producto = Productos[id];
     console.log(producto);
     return producto
 }
@@ -46,9 +57,9 @@ function calcularDescuento() {
     }
 }
 
-function mostrarProductos(arrayProductos) {
+function mostrarProductos(productos) {
     let gridStore = document.getElementById("gridStore");
-    for (let producto of arrayProductos) {  // OF ES PARA ARRAY (IN ES PARA STRINGS)
+    for (let producto of productos) {  // OF ES PARA ARRAY (IN ES PARA STRINGS)
         let codigoHTML = `
         <section class="producto${producto.id}"><div class="imgSizeTienda"><img src="./imgs/sobre nosotros/20211101_1902232 - copia.jpg" alt="" class="imgTienda"></div><div class="cat"><p>${producto.nombre} $${producto.precio}</p><button onclick="sumarAlCarrito(${producto.id})">Agregar al carrito</button></div></section>`;
         gridStore.innerHTML = gridStore.innerHTML + codigoHTML;
@@ -80,24 +91,11 @@ function mostrarCarrito() {
     }
 }
 function vaciarCarrito() {
-    if (costoDelCarrito > 0) {
-        Swal.fire(
-            'Vacio!',
-            'Tu carrito se ha vaciado con exito!',
-            'success'
-        )
-        costoDelCarrito = 0;
-        desc = 0;
-        productosCarrito = [];
-        localStorageSave();
-        mostrarCarrito();
-        return
-    }
-    Swal.fire(
-        'Ups!',
-        'No hay nada que vaciar aqui',
-        'error'
-    )
+    costoDelCarrito = 0;
+    desc = 0;
+    productosCarrito = [];
+    localStorageSave();
+    mostrarCarrito();
 }
 function pago() {
     if (costoDelCarrito > 0) {
@@ -131,11 +129,10 @@ async function fetchearProductos() {
     const response = await fetch("./catalogoProductos.json");
 
     // Desp se convierte a JSON
-    const arrayProductos = await response.json();
+    const productos = await response.json();
 
     // Luego se renderean los productos
-    mostrarProductos(arrayProductos);
-    productos = arrayProductos;
+    mostrarProductos(productos);
 }
 
 fetchearProductos();
